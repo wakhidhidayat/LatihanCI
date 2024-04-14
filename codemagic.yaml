@@ -4,6 +4,13 @@ workflows:
         scripts:
             - name: CI/CD Started
               script: echo "Welcome to CI/CD pipeline"
+            - name: iOS test
+              script: |
+                xcode-project run-tests \
+                  --workspace MyAwesomeApp.xcworkspace \
+                  --scheme MyAwesomeApp \
+                  --device "iPhone 11"
+            test_report: build/ios/test/*.xml
         publishing:
             email:
                 recipients:
