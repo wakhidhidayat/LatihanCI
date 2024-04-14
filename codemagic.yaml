@@ -4,9 +4,11 @@ workflows:
         scripts:
             - name: CI/CD Started
               script: echo "Welcome to CI/CD pipeline"
-            - name: iOS test
+            - name: Run Unit Test
               script: xcode-project run-tests --project TriangleApp.xcodeproj --scheme TriangleApp --device "iPhone 15"
               test_report: build/ios/test/*.xml
+            - name: Run Build
+              script: xcodebuild build -project "TriangleApp" -scheme "TriangleApp" CODE_SIGN_INDENTITY="" CODE_STONING_REQUIRED=NO CODE_SIGNING_ALLOWED=NO
         publishing:
             email:
                 recipients:
