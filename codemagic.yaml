@@ -1,0 +1,10 @@
+workflows:
+    testflight-workflow:
+        name: Testflight Workflow
+        scripts:
+            - name: CI/CD Started
+              script: echo "Welcome to CI/CD pipeline"
+        publishing:
+            email:
+                recepients:
+                    - wshidayat38@gmail.com
