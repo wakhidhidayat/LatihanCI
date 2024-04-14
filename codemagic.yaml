@@ -5,11 +5,7 @@ workflows:
             - name: CI/CD Started
               script: echo "Welcome to CI/CD pipeline"
             - name: iOS test
-              script: |
-                xcode-project run-tests \
-                  --workspace TriangleApp.xcodeproj \
-                  --scheme TriangleApp \
-                  --device "iPhone 15"
+              script: xcode-project run-tests --workspace TriangleApp.xcodeproj --scheme TriangleApp --device "iPhone 15"
             test_report: build/ios/test/*.xml
         publishing:
             email:
