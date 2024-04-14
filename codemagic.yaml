@@ -8,7 +8,7 @@ workflows:
               script: xcode-project run-tests --project TriangleApp.xcodeproj --scheme TriangleApp --device "iPhone 15"
               test_report: build/ios/test/*.xml
             - name: Run Build
-              script: xcodebuild build -project "TriangleApp" -scheme "TriangleApp" CODE_SIGN_INDENTITY="" CODE_STONING_REQUIRED=NO CODE_SIGNING_ALLOWED=NO
+              script: xcodebuild build -project "TriangleApp.xcodeproj" -scheme "TriangleApp" CODE_SIGN_INDENTITY="" CODE_STONING_REQUIRED=NO CODE_SIGNING_ALLOWED=NO
         publishing:
             email:
                 recipients:
