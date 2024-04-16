@@ -22,11 +22,11 @@ workflows:
         script: xcode-project build-ipa --project "TriangleApp.xcodeproj" —-scheme "TriangleApp"
         #- name: Run Build
           #script: xcodebuild build -project "TriangleApp.xcodeproj" -scheme "TriangleApp" CODE_SIGN_INDENTITY="" CODE_STONING_REQUIRED=NO CODE_SIGNING_ALLOWED=NO
-  publishing:
-    email:
-      recipients:
-        - wshidayat38@gmail.com
-  artifacts:
-    - build/ios/ipa/*.ipa
-    - /tmp/xcodebuild_logs/*.log
-    - SHOME/Library/Developer/Xcode/DerivedData/**/Build/**/*.dSYM
+    publishing:
+      email:
+        recipients:
+          - wshidayat38@gmail.com
+    artifacts:
+      - build/ios/ipa/*.ipa
+      - /tmp/xcodebuild_logs/*.log
+      - SHOME/Library/Developer/Xcode/DerivedData/**/Build/**/*.dSYM
