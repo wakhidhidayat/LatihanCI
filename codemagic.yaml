@@ -3,7 +3,7 @@ workflows:
     name: Testflight Workflow
     environment:
       groups:
-        - admin
+        - Admin
     scripts:
       - name: CI/CD Started
         script: echo "Welcome to CI/CD pipeline"
