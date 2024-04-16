@@ -19,7 +19,7 @@ workflows:
       - name: Set up code signing settings on Xcode project
         script: xcode-project use-profiles
       - name: Build IPA
-        script: xcode-project build-ipa --project "TriangleApp.xcodeproj" —-scheme TriangleApp
+        script: xcode-project build-ipa --project "TriangleApp.xcodeproj"
         #- name: Run Build
           #script: xcodebuild build -project "TriangleApp.xcodeproj" -scheme "TriangleApp" CODE_SIGN_INDENTITY="" CODE_STONING_REQUIRED=NO CODE_SIGNING_ALLOWED=NO
     publishing:
