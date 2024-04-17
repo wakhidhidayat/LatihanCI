@@ -23,6 +23,10 @@ workflows:
         #- name: Run Build
           #script: xcodebuild build -project "TriangleApp.xcodeproj" -scheme "TriangleApp" CODE_SIGN_INDENTITY="" CODE_STONING_REQUIRED=NO CODE_SIGNING_ALLOWED=NO
     publishing:
+      app_store_connect:
+        api_key: $APP_STORE_CONNECT_PRIVATE_KEY
+        key_id: $APP_STORE_CONNECT_KEY_IDENTIFIER
+        issuer_id: $APP_STORE_CONNECT_ISSUER_ID
       email:
         recipients:
           - wshidayat38@gmail.com
